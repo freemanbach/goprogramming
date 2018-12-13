@@ -20,14 +20,14 @@ func main() {
 
     // sorting out the grades
     if grade >=90 {
-        fmt.Println("A")
+        fmt.Println(grade , " is an A")
     } else if grade >= 80 {
-	fmt.Println("B")
+	fmt.Println(grade, " is a B")
     } else if grade >= 70 {
-	fmt.Println("C")
+	fmt.Println(grade, " is a C")
     } else if grade >= 60 {
-	fmt.Println("D")
+	fmt.Println(grade, " is a D")
     } else {
-	fmt.Println("F")
+	fmt.Println(grade, " is a F")
     }
 }
