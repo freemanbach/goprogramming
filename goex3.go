@@ -4,7 +4,7 @@ package main
 * @author  Freeman
 * @version 0.0.2
 * @link https://golang.org/pkg/
-* @since   2018.12.12
+* @since   2019.06.14
 */
 
 import "fmt"
