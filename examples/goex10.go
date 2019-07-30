@@ -15,12 +15,14 @@ import (
 //    "crypto/aes"
 //    "crypto/des"
 //    "crypto/dsa"
+    "crypto/sha1"
+    "crypto/sha256"
     "crypto/sha512"
-//    "encoding/base64"
+   b64 "encoding/base64"
     "fmt"
 )
 
-func encrypt_sha512() {
+func hash_sha512() {
     mess := "Hello this is planet Earth."
     digest := sha512.New()
     digest.Write([] byte(mess))
@@ -29,6 +31,34 @@ func encrypt_sha512() {
     fmt.Printf("%x\n", bs)
 }
 
+func hash_sha1() {
+    mess := "Hello this is planet Earth."
+    digest := sha1.New()
+    digest.Write([] byte(mess))
+    bs := digest.Sum(nil)
+    fmt.Println(mess)
+    fmt.Printf("%x\n", bs)
+}
+
+func hash_sha256(){
+    mess := "Hello this is planet Earth."
+    digest := sha256.New()
+    digest.Write([] byte(mess))
+    bs := digest.Sum(nil)
+    fmt.Println(mess)
+    fmt.Printf("%x\n", bs)
+}
+
+func b64Encode() {
+    data := "Hello this is planet Earth."
+    enc := b64.StdEncoding.EncodeToString([]byte(data))
+    fmt.Println(data)
+    fmt.Println(enc)
+}
+
 func main() {
-    encrypt_sha512()
+    hash_sha1()
+    hash_sha256()
+    hash_sha512()
+    b64Encode()
 }
