@@ -5,7 +5,7 @@
 * @since    2019.07.28
 * @Desc     THis lang is kind of difficult to get used to
 *           Must use what is called in namespace and stated variables in a file, 
-*			otherwise error. 
+*	    otherwise error. 
 ***********************************************************************************/
 
 package main
@@ -40,7 +40,6 @@ func playgame() {
     play := scan.Text()
 
     for play == "y" || play == "yes"  {
-        fmt.Println()
         fmt.Print("Enter in a value inclusive (0 - 10) ? ")
         scan.Scan()
         temp := scan.Text()
@@ -62,6 +61,7 @@ func playgame() {
 		    play = "y"
               }
          } else {
+                fmt.Println("Exiting Game.....")
 		syscall.Exit(0)
          }
     }
