@@ -2,3 +2,13 @@ Configure your GOLang installation location to include /opt/golang software loca
 then edit your .bashrc file to add GOLANG_HOME=/opt/golang then
 Add export PATH=$PATH:$GOLANG_HOME/bin
 Execute source .bashrc
+
+
+now we can execute go the compiler from our konsole.
+To build/compile GOLANG source code into native executible:
+go build filename.go
+TO build and run directly in a one step process:
+go run filename.go
+
+There are commands to clean off all the binary files:
+go clean
