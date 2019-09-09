@@ -5,7 +5,7 @@ package main
 * @version 0.0.1 
 * @link https://golang.org/pkg/
 * @since   2019.06.14
-* @Desc   quick test on gpg key
+* @Desc   quick test
 */
 
 
