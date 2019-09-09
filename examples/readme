@@ -1,0 +1,4 @@
+Configure your GOLang installation location to include /opt/golang software location
+then edit your .bashrc file to add GOLANG_HOME=/opt/golang then
+Add export PATH=$PATH:$GOLANG_HOME/bin
+Execute source .bashrc
