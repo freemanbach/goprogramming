@@ -9,18 +9,38 @@
 
 package main
 
-// kind of fun to play with cryptography
+// play with cryptography
 import (
-//    "crypto/elliptic"
-//    "crypto/aes"
-//    "crypto/des"
-//    "crypto/dsa"
+// mess with these in the later future
+// 	"crypto/ecdsa"
+// 	"crypto/elliptic"
+// 	"crypto/md5"
+// 	"crypto/rand"
+// 	"hash"
+// 	"io"
+// 	"math/big"
+// 	"os"
+    "math/rand"
     "crypto/sha1"
     "crypto/sha256"
     "crypto/sha512"
    b64 "encoding/base64"
     "fmt"
 )
+
+func genRandomInt() {
+    r := rand.New(rand.NewSource(99))
+    fmt.Println(r.Int31())
+    fmt.Println(r.Int63())
+    fmt.Println(r.Float32())
+    fmt.Println(r.Float64())
+    fmt.Println(r.Intn(100))
+    fmt.Println(r.Int31n(100))
+    fmt.Println(r.Int63n(100))
+    fmt.Println(r.Uint32())   
+    fmt.Println(r.Uint64())   
+    fmt.Println(r.Perm(5))   
+}
 
 func hash_sha512() {
     mess := "Hello this is planet Earth."
@@ -61,4 +81,5 @@ func main() {
     hash_sha256()
     hash_sha512()
     b64Encode()
+    genRandomInt()
 }
